@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/produto', async function(req, res){
+app.get('/produtos', async function(req, res){
   try {
     var produto = await Produto.select();
     res.json(produto.rows);
